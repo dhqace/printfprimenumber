@@ -2,10 +2,30 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int checkPrimeNumber(int n)
+{
+	if (n % 2 == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		for (int i = 3; i <= sqrt(n); i+=2)
+		{
+
+		}
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int num = 100;
+	cout << "the number is:" << num << endl;
+	system("pause");
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
