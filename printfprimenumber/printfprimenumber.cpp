@@ -4,7 +4,8 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
-
+//0:是质数
+//1:不是质数
 int checkPrimeNumber(int n)
 {
 	if (n % 2 == 0)
@@ -13,17 +14,29 @@ int checkPrimeNumber(int n)
 	}
 	else
 	{
-		for (int i = 3; i <= sqrt(n); i+=2)
+		for (int i = 3; i <= sqrt(n); i += 2)
 		{
-
+			if (n % i == 0)
+			{
+				return 1;
+			}
 		}
 	}
+	return 0;
 }
 
 int main()
 {
 	int num = 100;
-	cout << "the number is:" << num << endl;
+	int check_flag = 0;
+	for (int j = 1; j <= 100; j++)
+	{
+		check_flag = checkPrimeNumber(j);
+		if (check_flag == 0)
+		{
+			cout << "the number is:" << j << endl;
+		}
+	}
 	system("pause");
 	return 0;
 }
